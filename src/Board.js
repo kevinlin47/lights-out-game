@@ -31,11 +31,21 @@ import './Board.css';
 
 class Board extends Component {
 
+  static defaultProps = {
+    nrows: 5,
+    ncols: 5,
+    chanceLightStartsOn: 0.25
+  };
+
   constructor(props) {
     super(props);
 
     // TODO: set initial state
-  }
+    this.state = {
+      hasWon: false,
+      board: this.createBoard()
+    };
+  };
 
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
 
