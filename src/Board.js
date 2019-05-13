@@ -52,7 +52,16 @@ class Board extends Component {
   createBoard() {
     let board = [];
     // TODO: create array-of-arrays of true/false values
-    return board
+    for(let y = 0;y < this.props.nrows;++y)
+    {
+      let row = [];
+      for (let x = 0;x<this.props.ncols;++x)
+      {
+        row.push(Math.random() < this.props.chanceLightStartsOn);
+      }
+      board.push(row);
+    }
+    return board;
   }
 
   /** handle changing a cell: update board & determine if winner */
