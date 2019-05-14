@@ -86,7 +86,7 @@ class Board extends Component {
     flipCell(y - 1, x);
     flipCell(y + 1, x);
 
-    let hasWon = false;
+    let hasWon = board.every(row => row.every(cell => !cell));
 
     this.setState({board, hasWon});
   }
