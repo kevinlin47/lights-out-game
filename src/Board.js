@@ -80,12 +80,11 @@ class Board extends Component {
       }
     }
 
-    // TODO: flip this cell and the cells around it
+    flipCell(y, x);
 
-    // win when every cell is turned off
-    // TODO: determine is the game has been won
-
-    /*this.setState({board, hasWon})*/;
+    let hasWon = false;
+    
+    this.setState({board, hasWon});
   }
 
 
@@ -98,7 +97,7 @@ class Board extends Component {
       let row = [];
       for (let x = 0; x < this.props.ncols;++x) {
         let coord = `${y}-${x}`;
-        row.push(<Cell key={coord} isLit={this.state.board[y][x]}/>);
+        row.push(<Cell key={coord} isLit={this.state.board[y][x]} flipCellsAroundMe={() => this.flipCellsAround(coord)}/>);
       }
       tblBoard.push(<tr key={y}>{row}</tr>);
     }
