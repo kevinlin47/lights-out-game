@@ -13,6 +13,12 @@
   vertical-align: middle;
 }
 
+.Board-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .neon-orange {
   font-family: neon;
   color: #FB4264;
@@ -29,10 +35,10 @@
   text-shadow: 0 0 3vw #2356FF;
 }
 
-.neon {
-  animation: neon 1s ease infinite;
-  -moz-animation: neon 1s ease infinite;
-  -webkit-animation: neon 1s ease infinite;
+.neon-orange {
+  animation: neon-orange 1s ease infinite;
+  -moz-animation: neon-orange 1s ease infinite;
+  -webkit-animation: neon-orange 1s ease infinite;
 }
 
 @keyframes neon-orange {
@@ -48,10 +54,10 @@
 }
 
 .neon-blue {
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
+  animation: neon-blue 2s linear infinite;
+  -moz-animation: neon-blue 2s linear infinite;
+  -webkit-animation: neon-blue 2s linear infinite;
+  -o-animation: neon-blue 2s linear infinite;
 }
 
 @keyframes neon-blue {
